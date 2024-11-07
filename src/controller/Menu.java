@@ -20,8 +20,13 @@ public class Menu {
 	Scanner scan = new Scanner(System.in);
 
 	public void iniciarMenu() {
-		System.out.println("==== Menu ====\n" + "1. Adicionar Prato\n " + "2. Remover Prato\n " + "3. Listar Pratos \n "
-				+ "4. Preparar Pratos\n " + "5. Sair\n " + "Escolha uma Opção:");
+		System.out.println("==== Menu ====\n " 
+					+ "1. Adicionar Prato\n " 
+					+ "2. Remover Prato\n " 
+					+ "3. Listar Pratos \n "
+					+ "4. Preparar Pratos\n " 
+					+ "5. Sair\n " 
+					+ "Escolha uma Opção:");
 		int opcao = scan.nextInt();
 
 		do {
@@ -53,15 +58,11 @@ public class Menu {
 	public void adicionarPrato() {
 		System.out.println("Digite o nome do prato: ");
 		String nome = scan.nextLine();
-
+		scan.nextLine(); // separa e inicial prato.
 		System.out.println("Digite o preço do prato: ");
 		double preco = scan.nextDouble();
-
-		System.out.println(" Digite o tipo de prato\n 1 - Prato Principal 2 - Prato Sobremesa\n Digite um opção: ");
-		int tipo = scan.nextInt();
-
+	
 		scan.nextLine();
-
 		Prato prato = new Prato(nome, preco) {
 
 			@Override
@@ -70,7 +71,7 @@ public class Menu {
 				System.out.println("Preparando o prato: " + nome);
 			}
 		};
-
+		
 		cardapio.add(prato);
 		System.out.println("Prato adicionado.");
 	}

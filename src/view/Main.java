@@ -7,16 +7,16 @@ package view;
 
 import java.util.Scanner;
 
+import controller.Menu;
 import controller.Restaurante;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		Restaurante r = new Restaurante();
-		
+		Menu m = new Menu();
 		Scanner scan = new Scanner(System.in);
 		
-		
-		r.adicionarPrato(null);
+		m.iniciarMenu();
 	}
 }
